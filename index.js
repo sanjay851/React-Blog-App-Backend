@@ -1,15 +1,14 @@
 const express = require("express");
-
+console.log("Hello Node js");
 const app = express();
 
-const dataRouter = require("./Routes/data");
+const DataRouter = require("./Routes/data");
 
-const cors = require("cors");
+const cors = require("cors")
 
 app.use(cors());
+app.use("/api", DataRouter);
 
-app.use("/api", dataRouter);
-
-app.listen(process.env.PORT || 6000, () => {
+app.listen(process.env.PORT || 8050, () => {
   console.log("port is connected");
 });

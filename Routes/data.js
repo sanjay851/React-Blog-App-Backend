@@ -1,11 +1,16 @@
 const express = require("express");
 
-const server = require("../Controllers/data");
+const DataServer = require("../Controllers/data");
 
-const dataRouter = express.Router();
+const DataRouter = express.Router();
 
-dataRouter
-  .route("/home")
+ DataRouter.route("/details").get(DataServer.ApiController);
+ module.exports = DataRouter;
+// const express = require ("express")
+// const datacontroller = require("../Controllers/data")
 
-  .get(server.apicontroller);
-module.exports = dataRouter;
+// const DataRouter = express.Router()//we are linking our data.js file with our /api main
+// DataRouter.route("/details")//creating a route
+// .get(datacontroller.ApiController)//calling the data.js in Controller folder
+
+// module.exports = DataRouter

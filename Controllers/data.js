@@ -1,5 +1,5 @@
-const data =(req,res) =>{
-    req.send(
+const get =(req,res) =>{
+    res.send(
         [
             {
                 id:1,
@@ -214,4 +214,4 @@ const data =(req,res) =>{
         ]
     )
 };
-module.exports.apicontroller = data
+module.exports.ApiController = get
